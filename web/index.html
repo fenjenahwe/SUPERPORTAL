@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta charset="UTF-8" />
+    <title>SUPERPORTAL</title>
+    <link type="text/css" rel="stylesheet" media="all" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="main" class="container">
+      <div id="history">
+        <div class="toolbarhist">
+          <div id="myprofile">
+            <h3>SPACE CUSTOMIZATION</h3>
+          </div>
+        </div>
+        <div class="fill">
+          <button class="connectButton">logout</button>
+          <button class="newroomButton" onclick="View.showForm();">
+            new room
+          </button>
+          <button class="weatherButton">weather toggle</button>
+        </div>
+        <div class="histlist">
+          <div id="messages">
+            <div class="toolbarmess">
+              <div class="currentcontact">
+                <h3 id="roomName">CHAT</h3>
+              </div>
+            </div>
+            <div id="conversation">
+              <div class="joinleft" style="display: none">
+                <div class="username" style="display: none">system message</div>
+                <div class="publishedmsg sysmsg" style="display: none">
+                  lastu joined the room
+                </div>
+              </div>
+              <div class="received" style="display: none">
+                <div class="username" style="display: none">Fembot111</div>
+                <div class="publishedmsg" style="display: none">
+                  this is a message I received from someone
+                </div>
+              </div>
+              <div class="sent" style="display: none">
+                <div class="myusername" style="display: none">lastuadri</div>
+                <div class="publishedmsg" style="display: none">hi</div>
+              </div>
+            </div>
+
+            <div class="fill" id="typesendmsg">
+              <textarea
+                class="currentmessage"
+                type="text"
+                placeholder="type a message"
+              ></textarea>
+              <input
+                id="sendbutton"
+                class="sendmessage"
+                type="button"
+                value="send"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="Universe" width="512" height="512"></canvas>
+
+    <canvas id="gallery" width="512" height="512"></canvas>
+    <div id="EnterApp">
+      <img id="LandingImg" />
+      <div id="userpwd">
+        <label for="fname">Username</label>
+        <input type="text" id="input_username" name="fname" /><br /><br />
+        <label for="lname">Password</label>
+        <input type="password" id="input_password" name="lname" /><br /><br />
+        <input id="login" type="button" value="Log in / Register" class="btn" />
+        <div class="checkbox">
+          <label class="checkbox_container"
+            >Nova
+            <input type="radio" checked="checked" name="radio" value="1" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkbox_container"
+            >Pixel
+            <input type="radio" name="radio" value="2" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkbox_container"
+            >Jung
+            <input type="radio" name="radio" value="3" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkbox_container"
+            >Orbit
+            <input type="radio" name="radio" value="4" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkbox_container">
+            Flicker
+            <input type="radio" name="radio" value="5" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkbox_container">
+            Astra
+            <input type="radio" name="radio" value="6" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="createRoomForm" id="createRoomForm" style="display: none">
+      <!-- <div class="createRoomForm" id="createRoomForm"> -->
+      <div class="fill-vertical">
+        Room Name
+        <input
+          type="text"
+          id="roomname"
+          class="currentmessage"
+          placeholder="input the room name"
+        />
+        Background
+        <!-- <input
+          type="text"
+          id="background"
+          class="currentmessage"
+          placeholder="choose the background"
+        /> -->
+        <select name="cars" id="background" class="currentmessage"></select>
+        Welcome Message
+        <input
+          type="text"
+          id="welcomemsg"
+          class="currentmessage"
+          placeholder="input the welcome message"
+        />
+        <!-- Linked Room
+        <input
+          type="text"
+          class="currentmessage"
+          placeholder="choose the linked room"
+        /> -->
+        <input id="save" class="save" type="button" value="save" />
+        <input
+          class="save"
+          type="button"
+          value="close"
+          onclick="View.showForm();"
+        />
+      </div>
+    </div>
+    <!--  -->
+    <script src="./plugins/utils.js"></script>
+    <script src="./app/model.js"></script>
+    <script src="./config.js"></script>
+    <script src="./app/view.js"></script>
+    <script src="./app/mychat.js"></script>
+    <script src="./app/mycanvas.js"></script>
+    <!--  -->
+    <!--     
+    <script src="./p2/plugins/utils.js"></script>
+    <script src="./p2/app/model.js"></script>
+    <script src="./p2/config.js"></script>
+    <script src="./p2/app/view.js"></script>
+    <script src="./p2/app/mychat.js"></script>
+    <script src="./p2/app/mycanvas.js"></script>
+     -->
+  </body>
+</html>

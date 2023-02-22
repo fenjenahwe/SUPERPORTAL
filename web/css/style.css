@@ -1,0 +1,644 @@
+/*@media (max-width:1200px) {*/
+
+* {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "silkscreenfonth3";
+  src: url("./silkscreen-font/slkscr.ttf");
+}
+
+@font-face {
+  font-family: "silkscreenfonttxt";
+  src: url("./silkscreen-font/slkscre.ttf");
+}
+
+@font-face {
+  font-family: "silkscreenfontchat";
+  src: url("./silkscreen-font/slkscr.ttf");
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: slategrey;
+  /* height: 95%;
+  width: 90%; */
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  min-height: 600px;
+}
+
+div {
+  background-color: transparent;
+  height: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  width: 100%;
+  cursor: pointer;
+  background-color: rgb(89, 89, 131);
+}
+
+h3 {
+  font-family: "silkscreenfonth3";
+  font-weight: 500;
+}
+
+img {
+  object-fit: cover;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#main {
+  display: flex;
+  align-items: flex-start;
+  height: 97%;
+  width: 300px;
+  position: absolute;
+  left: 50px;
+  /* border: 1px solid rgb(95, 2, 2); */
+}
+
+#Universe {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  top: 0px;
+  left: 350px;
+  border: 1px solid #000000;
+  background-color: black;
+  /* display: none; */
+}
+
+#gallery {
+  position: relative;
+  background-color: transparent;
+  z-index: 999;
+  top: 60%;
+
+  left: calc(50% - 200px);
+}
+#EnterApp {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #031a2e;
+  left: 0px;
+  top: 0px;
+  /* display: none; */
+}
+.btn {
+  border-radius: 4px;
+  height: 30px;
+}
+.btn:hover {
+  transition: all 0.2s;
+  background-color: rgba(118, 109, 217, 0.8);
+  color: white;
+}
+
+#Start {
+  height: fit-content;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.fill {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #271777;
+  height: auto;
+}
+
+#myprofile {
+  text-align: center;
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+button {
+  background-color: #1dc9ff;
+  font-family: "silkscreenfonth3";
+  /* color:aliceblue; */
+  color: black;
+  border: 1px;
+  width: auto;
+  padding: 5px 5px 5px 5px;
+  border-radius: 5rem;
+}
+
+button:focus {
+  background-color: rgb(204, 202, 202);
+  color: rgb(78, 86, 93);
+}
+
+.usersButton {
+  width: 30px;
+  border-radius: 30px;
+  background: #ebe8e8;
+}
+
+#userpwd {
+  position: absolute;
+  display: block;
+  /* top: calc(50% - 100px); */
+  top: 28%;
+  width: 250px;
+  height: 200px;
+}
+
+#userpwd label {
+  font-family: "silkscreenfonth3";
+  color: white;
+}
+
+#userpwd input {
+  font-family: "silkscreenfonttxt";
+  color: black;
+}
+
+.onlineUsersHeader {
+  height: 15.5px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 10pt;
+  padding: 3px 5px 3px 5px;
+}
+
+.listOnlineUsers {
+  height: auto;
+  overflow: auto;
+}
+
+.onlineUsers {
+  height: auto;
+  background-color: rgb(6, 43, 167);
+  color: white;
+  text-align: left;
+  font-size: 10pt;
+  padding: 5px 5px 5px 5px;
+  border-top: 1px solid yellow;
+}
+
+#history {
+  /* flex: 0 0 300px; */
+  width: 300px;
+  height: 100%;
+  background-color: rgb(216, 210, 202);
+  display: flex;
+  flex-direction: column;
+}
+
+.hpreview {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 72px;
+  text-align: left;
+  background-color: azure;
+  border-top: 1px solid red;
+}
+
+.previewbox {
+  width: 225px;
+  height: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  margin-right: 1%;
+}
+
+.messageprev {
+  font-size: small;
+  color: rgb(108, 105, 105);
+  padding: 2%;
+  height: 15.5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.contactname {
+  padding: 2%;
+  padding-bottom: 0;
+}
+
+.histlist {
+  height: 100%;
+  background-color: rgb(131, 132, 136);
+  overflow: auto;
+}
+
+.histlist.lobby {
+  position: absolute;
+  width: 300px;
+  max-height: calc(95% - 62px - 51.5px);
+  top: calc(62px + 45.5px);
+}
+
+#messages {
+  flex: 1 1 auto;
+  background-color: rgb(44, 42, 58);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /*display: none;*/
+}
+
+.profilepic {
+  vertical-align: middle;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.light {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 20px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.icons {
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.chatroom {
+  background-color: darkblue;
+  color: gainsboro;
+}
+
+.roomprev {
+  color: yellow;
+}
+
+.toolbarhist {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  height: 62px;
+  min-height: 62px; /* this is here because it forces flexbox to this height, without it it doesn't*/
+  background-color: black;
+  color: white;
+}
+
+.toolbarmess {
+  display: flex;
+  align-items: flex-start;
+  /*justify-content:space-between;*/
+  height: 62px;
+  min-height: 62px; /* this is here because it forces flexbox to this height, without it it doesn't*/
+  background-color: slateblue;
+  background-color: black;
+  color: white;
+}
+
+.groupinfo {
+  color: rgb(32, 31, 31);
+}
+
+.righticons {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.lefticons {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  margin-left: 1%;
+  cursor: pointer;
+}
+
+#conversation {
+  overflow: auto;
+  overflow-anchor: none;
+  height: 100%;
+  display: grid;
+  align-content: flex-start;
+  width: 100%;
+  gap: 0.6rem;
+  padding-bottom: 10px;
+  /*display: none;*/
+}
+
+.currentcontact {
+  height: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  width: 505px;
+  justify-content: center;
+  cursor: pointer;
+  display: flex;
+}
+
+.received {
+  max-width: 200px;
+  width: auto;
+  height: fit-content;
+  text-align: left;
+  justify-self: left;
+  background-color: lightblue;
+  margin-top: 22px;
+  margin-left: 15px;
+  padding: 7px;
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  overflow-wrap: break-word;
+}
+
+.sent {
+  max-width: 200px;
+  width: auto;
+  height: fit-content;
+  text-align: left;
+  justify-self: right;
+  background-color: lightgreen;
+  margin-top: 22px;
+  margin-right: 15px;
+  padding: 7px;
+  border-radius: 0.5rem 0.5rem 0 0.5rem;
+  /*white-space: pre-line;*/
+  overflow-wrap: break-word;
+}
+
+#typesendmsg {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: auto;
+  padding-left: 10px;
+}
+
+.sendmessage {
+  width: 50px;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: transparent;
+  color: aliceblue;
+  font-weight: 800;
+  line-height: 100%;
+  margin-top: 4px;
+  font-family: "silkscreenfontchat";
+}
+
+.currentmessage {
+  display: block;
+  overflow: auto;
+  resize: none;
+  width: 93%;
+  margin: 0;
+  height: 25.5px;
+  background-color: white;
+  padding-left: 8px;
+  line-height: 25.5px;
+  font-size: 11pt;
+  white-space: normal;
+  border-radius: 3px;
+  font-family: "silkscreenfonth3";
+  color:green;
+}
+
+.currentmessage[contenteditable]:empty::before {
+  content: "Type a message";
+  color: gray;
+}
+
+.currentmessage::placeholder {
+  color: green;
+  font-family: "silkscreenfontchat";
+  font-weight: bold;
+}
+
+.joinleft {
+  font-family: "silkscreenfontchat";
+  border-radius: 5rem;
+  background-color: #1dc9ff;
+  color: black;
+  height: fit-content;
+  max-width: 250px;
+  width: fit-content;
+  padding: 4px 10px 4px 10px;
+  justify-self: center;
+  margin-top: 22px;
+  text-align: center;
+}
+
+.username {
+  font-family: "silkscreenfonth3";
+  font-size: 10pt;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.myusername {
+  display: none;
+}
+
+.publishedmsg {
+  font-family: "silkscreenfontchat";
+  font-size: 9pt;
+}
+
+.private.publishedmsg {
+  font-style: italic;
+}
+
+.sysmsg.publishedmsg {
+  font-size: 9pt;
+  font-family: "silkscreenfontchat";
+}
+
+.fade-out {
+  animation: fadeOut ease 5s;
+  animation-fill-mode: forwards;
+}
+
+.createRoomForm {
+  background-color: white;
+  width: 400px;
+  height: auto;
+  border-radius: 5px;
+  position: absolute;
+  top: 32%;
+  left: 40%;
+  z-index: 999;
+}
+
+.fill-vertical {
+  border-radius: 5px;
+  display: block;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #271777;
+  height: 100%;
+  color: white;
+  padding: 10px;
+  font-family: "silkscreenfontchat";
+  font-weight: bold;
+
+}
+
+.fill-vertical input {
+  margin-bottom: 40px;
+  font-family: "silkscreenfontchat";
+  font-weight: bold;
+  color:green;
+  margin: 0 auto;
+}
+
+.fill-vertical select {
+  margin-bottom: 40px;
+  margin: 0 auto;
+  font-family: "silkscreenfontchat";
+  color: green;
+}
+
+.save {
+  width: 400px;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: transparent;
+  color: aliceblue;
+  font-size: larger;
+  font-weight: 800;
+  padding-top: 20px;
+  font-family: "silkscreenfontchat";
+}
+.checkbox {
+  background-color: rgba(118, 109, 217, 0.8);
+  border-radius: 10px;
+  position: absolute;
+  left: -175px;
+  height: fit-content;
+  width: 600px;
+  padding: 14px;
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.checkbox_container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.checkbox_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox_container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.checkbox_container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.checkbox_container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.checkbox_container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
